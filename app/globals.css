@@ -3,23 +3,23 @@
 @tailwind utilities;
 
 :root {
-  --background: 38 44% 96%;
-  --foreground: 20 24% 18%;
+  --background: 0 0% 100%;
+  --foreground: 222.2 47.4% 11.2%;
   --card: 0 0% 100%;
-  --card-foreground: 20 24% 18%;
+  --card-foreground: 222.2 47.4% 11.2%;
   --popover: 0 0% 100%;
-  --popover-foreground: 20 24% 18%;
-  --primary: 20 45% 32%;
-  --primary-foreground: 38 44% 96%;
-  --secondary: 37 35% 90%;
-  --secondary-foreground: 20 24% 18%;
-  --muted: 37 25% 92%;
-  --muted-foreground: 20 10% 42%;
-  --accent: 31 34% 88%;
-  --accent-foreground: 20 24% 18%;
-  --border: 31 25% 84%;
-  --input: 31 25% 84%;
-  --ring: 20 45% 32%;
+  --popover-foreground: 222.2 47.4% 11.2%;
+  --primary: 222.2 47.4% 11.2%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 210 40% 96%;
+  --secondary-foreground: 222.2 47.4% 11.2%;
+  --muted: 210 40% 96%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  --accent: 210 40% 96%;
+  --accent-foreground: 222.2 47.4% 11.2%;
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 222.2 47.4% 11.2%;
 }
 
 * {
@@ -32,13 +32,10 @@ html {
 
 body {
   @apply bg-background text-foreground antialiased;
-  background-image:
-    radial-gradient(circle at top left, rgba(194, 145, 99, 0.14), transparent 28%),
-    radial-gradient(circle at right bottom, rgba(100, 63, 43, 0.1), transparent 25%),
-    linear-gradient(180deg, rgba(250, 247, 241, 0.95), rgba(243, 234, 220, 0.78));
+  font-feature-settings: 'ss01' 1, 'ss02' 1, 'cv02' 1, 'cv03' 1;
 }
 
 ::selection {
-  background: rgba(130, 84, 55, 0.2);
-  color: #2e1d15;
+  background: rgba(15, 23, 42, 0.12);
+  color: #0f172a;
 }
