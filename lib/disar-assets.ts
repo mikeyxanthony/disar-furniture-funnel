@@ -1,37 +1,57 @@
-export const DISAR_ASSET_BASE = '/images/';
+export const DISAR_ASSET_BASE = 'https://storage.googleapis.com/wzukusers/user-27272036/sites/44868093/';
 
 export const DISAR_LOGO_PATH = '58d1aa442c317OenUrYM/Disar-Furniture.png';
 
 export const featuredServicePhotos = [
   {
     "label": "Antique repair",
-    "path": "5ac8e8f13392c2sRb902/Antique-Wagon-Wheel.jpg",
-    "description": "Heirloom repair and careful restoration."
+    "path": "https://unsplash.com/photos/2ovBrbfQr0Y/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8Mnx8ZnVybml0dXJlJTIwcmVwYWlyfGVufDB8fHx8MTc2Mzg4NDY2OXww&force=true",
+    "description": "Careful repair for heirloom pieces."
   },
   {
     "label": "Refinishing",
-    "path": "5ac8e955b08e3q1qZqG1/Green-Desk.jpg",
-    "description": "Surface repair and refinishing work."
+    "path": "https://unsplash.com/photos/m4FB7fzTr80/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8M3x8ZnVybml0dXJlJTIwcmVwYWlyfGVufDB8fHx8MTc2Mzg4NDY2OXww&force=true",
+    "description": "Wood surface prep and refinishing."
   },
   {
     "label": "Cabinet work",
-    "path": "5ac9984be413d7ZMl3Kz/Spice-Cabinet.jpg",
-    "description": "Fine finish work for wooden cabinetry."
+    "path": "https://unsplash.com/photos/tnFNlnBgo4A/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8NHx8ZnVybml0dXJlJTIwcmVwYWlyfGVufDB8fHx8MTc2Mzg4NDY2OXww&force=true",
+    "description": "Clean finish work for cabinets."
   },
   {
     "label": "Upholstery",
-    "path": "5ac999822a2a4h44fR4L/Upholstery-Jobs.jpg",
-    "description": "Reupholstery and soft goods updates."
+    "path": "https://unsplash.com/photos/KV2KjOCSBB4/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8Nnx8ZnVybml0dXJlJTIwcmVwYWlyfGVufDB8fHx8MTc2Mzg4NDY2OXww&force=true",
+    "description": "Reupholstery and fabric restoration."
   },
   {
-    "label": "Furniture restoration",
-    "path": "5ac99e6e4ea00yDfw3s1/Chest.jpg",
-    "description": "Restoration details for classic furniture."
+    "label": "Leather repair",
+    "path": "https://unsplash.com/photos/6xUKX96KACk/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8N3x8ZnVybml0dXJlJTIwcmVwYWlyfGVufDB8fHx8MTc2Mzg4NDY2OXww&force=true",
+    "description": "Leather care and repair detail."
   },
   {
-    "label": "Velvet seating",
-    "path": "5be5c6378018dePdva7L/B-and-F-velvet.jpg",
-    "description": "Before-and-finish portfolio work."
+    "label": "Chair restoration",
+    "path": "https://unsplash.com/photos/Z_cUFs1Zj3Y/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8OHx8ZnVybml0dXJlJTIwcmVwYWlyfGVufDB8fHx8MTc2Mzg4NDY2OXww&force=true",
+    "description": "Antique chair restoration work."
+  },
+  {
+    "label": "Workshop detail",
+    "path": "https://unsplash.com/photos/4Bfo5vlzjbA/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8MTB8fGZ1cm5pdHVyZSUyMHJlcGFpcnxlbnwwfHx8fDE3NjM4ODQ2Njl8MA&force=true",
+    "description": "Hands-on woodworking and repair."
+  },
+  {
+    "label": "Wood repair",
+    "path": "https://unsplash.com/photos/BPByf91fLxI/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8MTF8fGZ1cm5pdHVyZSUyMHJlcGFpcnxlbnwwfHx8fDE3NjM4ODQ2Njl8MA&force=true",
+    "description": "Precision wood restoration and touch-up."
+  },
+  {
+    "label": "Cabinet refinishing",
+    "path": "https://unsplash.com/photos/7HVhOC-Xl6o/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8MTJ8fGZ1cm5pdHVyZSUyMHJlcGFpcnxlbnwwfHx8fDE3NjM4ODQ2Njl8MA&force=true",
+    "description": "Refinishing for kitchen and storage pieces."
+  },
+  {
+    "label": "Furniture craft",
+    "path": "https://unsplash.com/photos/bQGFBHNt8ls/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8MTR8fGZ1cm5pdHVyZSUyMHJlcGFpcnxlbnwwfHx8MTc2Mzg4NDY2OXww&force=true",
+    "description": "Craftsmanship in furniture repair."
   }
 ] as const;
 
@@ -177,5 +197,5 @@ export const portfolioPhotoPaths = [
 ] as const;
 
 export function disarAssetUrl(path: string) {
-  return `${DISAR_ASSET_BASE}${path}`;
+  return path.startsWith('http://') || path.startsWith('https://') ? path : `${DISAR_ASSET_BASE}${path}`;
 }
